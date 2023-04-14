@@ -1,0 +1,30 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Python: Flask",
+      "type": "python",
+      "request": "launch",
+      "module": "flask",
+      "env": {
+        "FLASK_APP": "app.py",
+        "FLASK_DEBUG": "1",
+        "ENCRYPTION_KEY": "abc123"
+      },
+      "args": ["run", "--no-debugger", "--no-reload"],
+      "jinja": true,
+      "justMyCode": true
+    },
+    {
+      "name": "Python: Test debug config",
+      "type": "python",
+      "request": "launch",
+      "env": {
+        "ENCRYPTION_KEY": "abc123"
+      },
+      "console": "integratedTerminal",
+      "purpose": ["debug-test"],
+      "logToFile": true
+    }
+  ]
+}

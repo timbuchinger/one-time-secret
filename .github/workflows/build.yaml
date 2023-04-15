@@ -115,6 +115,8 @@ jobs:
 
       - run: npm install
 
+      - run: npx tailwindcss -i ./project/static/src/input.css -o ./project/static/dist/css/output.css
+
       # - run: npm run build
 
       - name: Build and push

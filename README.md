@@ -4,6 +4,12 @@
 
 See the launch.json file for debug and unit test profiles.
 
+If updating the UI, run tailwindcss in watch mode.
+
+```bash
+npx tailwindcss -i ./project/static/src/input.css -o ./project/static/dist/css/output.css --watch
+```
+
 ## Running
 
 ### Docker

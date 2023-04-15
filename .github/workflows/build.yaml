@@ -109,6 +109,14 @@ jobs:
         id: date
         run: echo "::set-output name=date::$(date +'%Y-%m-%d')"
 
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - run: npm install
+
+      - run: npm run build
+
       - name: Build and push
         id: docker_build
         uses: docker/build-push-action@v3

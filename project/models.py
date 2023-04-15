@@ -7,7 +7,7 @@ from sqlalchemy_utils.types.encrypted.encrypted_type import AesEngine
 
 class Secret(db.Model):
     # key = 'test'
-    key = os.environ.get("ENCRYPTION_KEY")
+    key = os.environ.get("ENCRYPTION_KEY", default='BAD_SECRET_KEY')
 
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(100), nullable=False)

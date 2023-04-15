@@ -7,7 +7,7 @@ on:
       publish_artifacts:
         description: 'Publish artifacts'
         required: false
-        default: 'true'
+        default: 'false'
 
 jobs:
   build-flask-app:
@@ -115,7 +115,7 @@ jobs:
 
       - run: npm install
 
-      - run: npm run build
+      # - run: npm run build
 
       - name: Build and push
         id: docker_build

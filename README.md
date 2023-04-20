@@ -14,9 +14,13 @@ npx tailwindcss -i ./project/static/src/input.css -o ./project/static/dist/css/o
 
 ### Docker
 
+```bash
 docker run -p 5000:5000 -e ENCRYPTION_KEY="YOUR-ENCRYPTION-KEY" timbuchinger/one-time-secret:latest
+```
 
 ### Local
 
+```bash
 pip install -r requirements.txt
 flask run --host=0.0.0.0 --ENCRYPTION_KEY="YOUR-ENCRYPTION-KEY"
+```
